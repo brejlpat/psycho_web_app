@@ -5,7 +5,7 @@ K uchovávání uživatelů (account management), seznam kurzů, videa jednotliv
 uživatele  
 
 ## PHP backend
-[ ] Laravel - zjistit jestli bude fungovat na Forpsi nebo na jakém hostingu to půjde  
+- [ ] Laravel - zjistit jestli bude fungovat na Forpsi nebo na jakém hostingu to půjde  
 
 ### Správa uživatelů
 - propojení s tabulkou "uživatelé" v SQL  
@@ -30,7 +30,7 @@ Tato logika bude implementována v rámci Auth middleware (auth.php). Při gener
 
 ### Správa nákupů (objednávky a platby)
 - jakmile uživatel vybere kurz a klikne na objednat, zavolá se funkce, která vytvoří novou Objednávku, zapíše do SQL a zobrazí se údaje k platbě + se pošlou na email  
-[ ] Jde generovat QR kód k platbě i v php? Pokud ano, bude i QR  
+- [ ] Jde generovat QR kód k platbě i v php? Pokud ano, bude i QR  
 - objednávka je nyní ve stavu "neuhrazeno" dokud uživatel platbu přes bankovní převod neuhradí    
 Máme tři varianty jak kontrolovat přijaté platby:  
 1. Manuálně - po příchozí platbě by "admin" přepnul v databázi stav objednávky na "uhrazeno"  
