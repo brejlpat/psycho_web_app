@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startujeme předškoláky</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="static/SP_logo_waving.png" alt="Logo Startujeme předškoláky" class="logo">
+            <h1>STARTUJEME PŘEDŠKOLÁKY</h1>
+            <p>Připravte se na školu s klidem a radostí – pro děti i pro vás</p>
+            <a href="#pomocnik" class="btn">Zjistit víc</a>
+        </div>
+    </header>
+
+    <section class="about fade-in">
+        <div class="container">
+            <h2>O projektu</h2>
+            <p>Máte doma budoucího školáka a v hlavě spoustu otázek? Nejste sami.</p>
+            <p>Projekt <strong>Startujeme předškoláky</strong> vznikl, aby pomohl rodičům porozumět tomu, co dítě do školy opravdu potřebuje – bez zbytečného stresu, seznamů a obav.</p>
+            <p>Jsem dětská klinická psycholožka s 20 lety praxe, intenzivně pracuji s předškoláky a jejich rodinami. Vím, co funguje a co dětem i rodičům usnadňuje přechod do školy.</p>
+        </div>
+    </section>
+
+    <section class="for-whom fade-in">
+        <div class="container">
+            <h2>Pro koho je tento projekt?</h2>
+            <ul>
+                <li>Pro rodiče dětí, které se chystají do první třídy</li>
+                <li>Pro každého, kdo chce dítě podpořit v rozvoji bez tlaku</li>
+                <li>Pro ty, kdo chtějí vědět, co je školní zralost a jak ji poznat</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="pomocnik" class="animated-link fade-in">
+        <div class="container">
+            <h2>Připravujeme pro vás</h2>
+            <p>Už brzy vám představíme náš <strong>rodičovský pomocník</strong> – sérii praktických průvodců, návodů a inspirací, které vám pomohou připravit dítě na školu v pohodě a s důvěrou.</p>
+            <p>Začneme tím, co děti potřebují nejvíc – <strong>POHYBEM</strong>. A bude to hravé, jednoduché a přitom velmi účinné.</p>
+            <p>Každý rodič má v sobě nástroje k tomu, aby své dítě podpořil. My vám je jen pomůžeme odhalit a využít.</p>
+            <p>Sledujte nás na Instagramu: <a href="https://www.instagram.com/startujemepredskolaky" target="_blank">@startujemepredskolaky</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Startujeme předškoláky | <a href="mailto:info@startujemepredskolaky.cz">info@startujemepredskolaky.cz</a></p>
+        </div>
+    </footer>
+
+<script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible'); // reset při odjetí
+            }
+        });
+    }, { threshold: 0.1 });
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
+
+</body>
+</html>
