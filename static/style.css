@@ -1,15 +1,24 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background-color: #ffffff;
+    background-color: #95adff;
     color: #333;
 }
 
 header {
-    background: linear-gradient(to bottom, #004a99, #0074d9);
-    color: white;
+    background: linear-gradient(to bottom, yellow, orange, transparent);
+    color: #004a99;
+    /*#0074d9*/
     padding: 60px 20px;
     text-align: center;
+    position: relative; /* <- přidat */
+    overflow: visible;   /* <- pro jistotu */
+    z-index: 0;
+    height: 50vh;
+}
+
+header .container {
+    margin-top: 50px;
 }
 
 .logo {
@@ -18,6 +27,14 @@ header {
     margin-bottom: 0px;
     top: 20px;
     left: 5vw;
+}
+
+.logo1 {
+    position: absolute;
+    max-width: 20vw;
+    margin-bottom: 0px;
+    top: 20px;
+    right: 5vw;
 }
 
 h1 {
@@ -74,6 +91,7 @@ h2 {
 ul {
     list-style-type: none;
     padding-left: 0;
+    font-size: 1.1rem;
 }
 
 ul li::before {
@@ -83,7 +101,8 @@ ul li::before {
 }
 
 footer {
-    background-color: #f2f2f2;
+    background: linear-gradient(to bottom, transparent, orange 35%, yellow 100%);
+    /*background-color: #f2f2f2;*/
     padding: 10px;
     text-align: center;
     font-size: 0.9rem;
@@ -96,25 +115,10 @@ footer {
     font-weight: bold;
 }
 
-.animated-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0%;
-    height: 2px;
-    background-color: #ff5a00;
-    transition: width 0.3s ease;
-}
-
-.animated-link:hover::after {
-    width: 100%;
-}
-
 .fade-in {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 2s ease, transform 2s ease;
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .fade-in.visible {
