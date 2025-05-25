@@ -49,8 +49,9 @@ async def submit_form(name: str = Form(...), email: str = Form(...)):
                 filename="Startujeme předškoláky - informace.pdf"
             )
 
-        # ⬇️ Odeslání přes SMTP (Seznam.cz)
-        with smtplib.SMTP_SSL("smtp.forpsi.com", 465) as smtp:
+        with smtplib.SMTP("smtp.forpsi.com", 587) as smtp:
+            smtp.ehlo()
+            smtp.starttls()
             smtp.login("info@startujemepredskolaky.cz", os.getenv("mail_password"))
             smtp.send_message(msg)
 
