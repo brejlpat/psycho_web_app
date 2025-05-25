@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(ellipse at center, #004a99 10%, #4c8bc4 100%);
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to bottom, #ff762f, orange, transparent);
+    color: #004a99;
+    /*#0074d9*/
+    padding: 60px 20px;
+    text-align: center;
+    position: relative; /* <- přidat */
+    overflow: visible;   /* <- pro jistotu */
+    z-index: 0;
+    height: 50vh;
+}
+
+header .container {
+    margin-top: 10px;
+}
+
+header h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+header .container p {
+    color: #004a99;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo {
+    position: absolute;
+    max-width: 20vw;
+    margin-bottom: 0px;
+    top: 20px;
+    left: 5vw;
+}
+
+.logo1 {
+    position: absolute;
+    max-width: 20vw;
+    margin-bottom: 0px;
+    top: 20px;
+    right: 5vw;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.container p {
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 30, 60, 0.5);
+}
+
+a {
+    color: #0074d9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff5a00
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #ff5a00;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e14d00;
+}
+
+.container {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+hr {
+    width: 80%;
+    justify-content: center;
+    margin: 20px auto;
+    border: 0;
+    border-top: 2px solid #ff762f;
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    padding: 10px 0;
+}
+
+.container h2 {
+    color: #ff762f;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 30, 60, 0.5);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.1rem;
+}
+
+ul li {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 30, 60, 0.5);
+}
+
+ul li::before {
+    content: "✔️";
+    margin-right: 8px;
+    color: #ff5a00;
+}
+
+footer {
+    background: linear-gradient(to bottom, transparent, orange 35%, #ff762f 100%);
+    /*background-color: #f2f2f2;*/
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #004a99;
+}
+
+.animated-link {
+    position: relative;
+    color: #004a99;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;  /* ✅ tohle zarovná všechno na střed */
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.contact {
+    text-align: center;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #004a99;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus {
+    outline: none;
+    border-color: #ff5a00;
+}
+
+.btn-form {
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 25px;
+    background-color: #ff5a00;
+    color: white !important;
+    text-decoration: none;
+    width: 50%;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid #004a99;
+}
+
+.btn-form:hover {
+    background-color: #e14d00;
+    transform: scale(1.05);
+}

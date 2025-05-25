@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Fingerprint test</title>
+</head>
+<body>
+  <h1>Fingerprint zařízení</h1>
+
+  <button onclick="getFingerprint()">Zobraz můj fingerprint</button>
+  <button onclick="showFingerprintDetails()">Zobraz detaily</button>
+
+  <p id="result" style="margin-top: 20px; font-family: monospace;"></p>
+  <pre id="details" style="margin-top: 20px; font-family: monospace;"></pre>
+
+  <script>
+    function getDevicePayload() {
+      return {
+        resolution: `${screen.width}x${screen.height}`,
+        platform: navigator.platform,
+        language: navigator.language,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+      };
+    }
+
+    async function getFingerprint() {
+      const payload = getDevicePayload();
+
+      const response = await fetch("/device-fingerprint", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json();
+      document.getElementById("result").innerText = "Fingerprint: " + data.fingerprint;
+    }
+
+    async function showFingerprintDetails() {
+      const payload = getDevicePayload();
+
+      const response = await fetch("/device-fingerprint-details", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json();
+      document.getElementById("details").innerText = JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>

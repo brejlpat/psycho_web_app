@@ -1,0 +1,110 @@
+@media (max-width: 1000px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header .container p {
+        font-size: 1rem;
+    }
+
+    .logo, .logo1 {
+        max-width: 30vw;
+        top: 10px;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 20px 15px;
+        max-width: 90%;
+    }
+
+    .container h2 {
+        font-size: 1.5rem;
+    }
+
+    ul li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        text-align: center;
+    }
+    header {
+        height: auto;
+        padding: 40px 10px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        padding: 10px 10px;
+        text-align: center;
+    }
+
+    section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    header .container p {
+        font-size: 1.4rem;
+        width: 95%;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    hr {
+        width: 90%;
+    }
+
+    .logo, .logo1 {
+        max-width: 20vw;
+        top: 10px;
+    }
+
+    .logo {
+        left: 10px;
+    }
+
+    .logo1 {
+        right: 10px;
+    }
+
+    .container p {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 6px 18px;
+        font-size: 1.2rem;
+    }
+
+    ul li {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .container h2 {
+        font-size: 1.6rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        max-width: 100%;
+    }
+
+    .contact-form input {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
