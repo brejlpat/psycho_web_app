@@ -3,6 +3,7 @@ from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from email.message import EmailMessage
+from email.utils import formataddr
 from jinja2 import Template
 import smtplib
 import os
@@ -28,8 +29,8 @@ async def submit_form(name: str = Form(...), email: str = Form(...)):
 
         # ⬇️ Vytvoření e-mailu
         msg = EmailMessage()
-        msg['Subject'] = 'Startujeme předškoláky - podrobné informace'
-        msg['From'] = 'info@startujemepredskolaky.cz'
+        msg['Subject'] = 'Startujeme předškoláky - Jak na to?'
+        msg['From'] = formataddr(("STARTUJEME PŘEDŠKOLÁKY", "info@startujemepredskolaky.cz"))
         msg['To'] = email
 
         with open("templates/email_template.html", "r", encoding="utf-8") as f:
@@ -50,7 +51,7 @@ async def submit_form(name: str = Form(...), email: str = Form(...)):
 
         # ⬇️ Odeslání přes SMTP (Seznam.cz)
         with smtplib.SMTP_SSL("smtp.forpsi.com", 465) as smtp:
-            smtp.login("info@startujemepredskolaky.cz", "5889cav-95")
+            smtp.login("info@startujemepredskolaky.cz", os.getenv("mail_password"))
             smtp.send_message(msg)
 
         return JSONResponse({"status": "ok", "message": "E-mail odeslán."})
