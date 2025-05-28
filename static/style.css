@@ -6,7 +6,6 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: radial-gradient(ellipse at center, #004a99 10%, #4c8bc4 100%);
-    color: #333;
 }
 
 header {
@@ -120,7 +119,7 @@ section {
 }
 
 .container h2 {
-    color: #ff762f;
+    color: #ff762f !important;
     font-weight: bold;
     font-size: 2rem;
     margin-bottom: 15px;
@@ -154,7 +153,11 @@ footer {
     padding: 10px;
     text-align: center;
     font-size: 0.9rem;
-    color: #004a99;
+}
+
+footer p {
+    margin: 0;
+    color: #004a99 !important;
 }
 
 .animated-link {
@@ -265,29 +268,33 @@ footer {
     margin: 2rem 0;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     transition: box-shadow 0.3s ease;
 }
 
-.highlight:hover {
-    box-shadow: 0 6px 20px rgba(255, 118, 47, 0.3); /* oranžový stín */
-    border-left-color: #ff762f; /* oranžový proužek */
-    border-right-color: #ff762f; /* oranžový proužek */
+.highlight li {
+    font-size: 1.2rem;
 }
 
-.container a.link-to-form {
+.highlight:hover {
+    box-shadow: 0 6px 20px rgba(255, 118, 47, 0.3);
+    border-left-color: #ff762f;
+    border-right-color: #ff762f;
+}
+
+.link-to-form {
     color: #004a99;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-.container a.link-to-form:hover {
+.link-to-form:hover {
     color: #ff5a00;
     text-decoration: underline;
-    underline-color: #ff5a00;
-    underline-offset: 4px;
+    text-decoration-color: #ff5a00 !important;
+    text-underline-offset: 4px;
 }
 
 .outro {
