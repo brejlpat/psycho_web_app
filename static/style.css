@@ -150,7 +150,7 @@ ul li::before {
 footer {
     background: linear-gradient(to bottom, transparent, orange 35%, #ff762f 100%);
     /*background-color: #f2f2f2;*/
-    padding: 0;
+    padding: 2rem 0 0 0;
     text-align: center;
     font-size: 0.9rem;
     height: 125px;
