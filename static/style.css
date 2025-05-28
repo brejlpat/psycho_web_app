@@ -150,9 +150,14 @@ ul li::before {
 footer {
     background: linear-gradient(to bottom, transparent, orange 35%, #ff762f 100%);
     /*background-color: #f2f2f2;*/
-    padding: 10px;
+    padding: 0;
     text-align: center;
     font-size: 0.9rem;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 footer p {
@@ -322,6 +327,7 @@ footer p {
 
 .profile-img {
     max-width: 250px;
+    margin: 0;
     width: 100%;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -339,6 +345,10 @@ footer p {
 .profile-text {
     flex: 1;
     min-width: 250px;
+}
+
+.proc_vznika_phone {
+    display: none;
 }
 
 @media (max-width: 768px) {
